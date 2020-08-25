@@ -28,3 +28,8 @@ per file. See the workflow for details.
 The color coding needs to be printed as a reference manual for the concerned telecom personnel.
 Provide a ToString() function in the code that would return the mapping which can be printed as a manual.
 Also resolve any coding guideline violations.
+
+### Updates
+
+The new feature to return the mapping of the color pairs alongwith the pair numbers is added.
+The file is split into two functions instead of one main to resolve the exceeding LOC error.
