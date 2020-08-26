@@ -26,11 +26,15 @@ void testPairToNumber(
 void ToString()
 {
     std::cout<<"-----REFERENCE MANUAL-----"<<std::endl;
-    for(int pairNo = 1; pairNo <= 25; pairNo++)
+    string refManual = "";
+    noOfColorPairs = TelCoColorCoder::numberOfMinorColors*TelCoColorCoder::numberOfMajorColors;
+    for(int pairNo = 1; pairNo <= noOfColorPairs; pairNo++)
     {
         TelCoColorCoder::ColorPair majorMinorColorPair = TelCoColorCoder::GetColorFromPairNumber(pairNo);
-        std::cout<<"("<<pairNo<<"->"<<majorMinorColorPair.ToString()<<")";
+        //std::cout<<"("<<pairNo<<"->"<<majorMinorColorPair.ToString()<<")";
+        refManual += "("+pairNo+"->"+majorMinorColorPair.ToString()+")";
     }
+    std::cout<<refManual<<std::endl;
 }
 
 int main() {
