@@ -23,16 +23,15 @@ void testPairToNumber(
     assert(pairNumber == expectedPairNumber);
 }
 
-void ToString()
+void getAllPairsInString()
 {
     std::cout<<"-----REFERENCE MANUAL-----"<<std::endl;
-    string refManual = "";
+    std::string refManual = "";
     noOfColorPairs = TelCoColorCoder::numberOfMinorColors*TelCoColorCoder::numberOfMajorColors;
     for(int pairNo = 1; pairNo <= noOfColorPairs; pairNo++)
     {
         TelCoColorCoder::ColorPair majorMinorColorPair = TelCoColorCoder::GetColorFromPairNumber(pairNo);
-        //std::cout<<"("<<pairNo<<"->"<<majorMinorColorPair.ToString()<<")";
-        refManual += "("+pairNo+"->"+majorMinorColorPair.ToString()+")";
+        refManual += "("+std::to_string(pairNo)+"->"+majorMinorColorPair.ToString()+")";
     }
     std::cout<<refManual<<std::endl;
 }
@@ -43,6 +42,6 @@ int main() {
 
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
-    ToString();
+    getAllPairsInString();
     return 0;
 }
