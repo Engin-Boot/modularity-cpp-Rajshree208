@@ -27,7 +27,7 @@ void getAllPairsInString()
 {
     std::cout<<"-----REFERENCE MANUAL-----"<<std::endl;
     std::string refManual = "";
-    noOfColorPairs = TelCoColorCoder::numberOfMinorColors*TelCoColorCoder::numberOfMajorColors;
+    int noOfColorPairs = TelCoColorCoder::numberOfMinorColors*TelCoColorCoder::numberOfMajorColors;
     for(int pairNo = 1; pairNo <= noOfColorPairs; pairNo++)
     {
         TelCoColorCoder::ColorPair majorMinorColorPair = TelCoColorCoder::GetColorFromPairNumber(pairNo);
